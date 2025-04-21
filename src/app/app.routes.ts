@@ -6,6 +6,5 @@ import { ConvertComponent } from './pages/convert/convert.component';
 export const routes: Routes = [
     { path: "home", component: HomeComponent }, 
     { path: "about", component: AboutComponent},
-    { path: "convert", component: ConvertComponent},
-    { path: "", redirectTo: "home", pathMatch: "full"}
+    { path: "convert", component: ConvertComponent}
 ];
