@@ -1,3 +1,18 @@
+ul {
+    margin: 0;
+    padding: 1em;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
 .active {
     color: green;
 }
