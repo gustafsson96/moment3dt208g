@@ -11,7 +11,7 @@ body {
 main {
     background-color: aqua;
     padding: 1em 1em 3em 1em;
-    flex: 1;
+    min-height: 100vh;
 }
 
 h1 {
