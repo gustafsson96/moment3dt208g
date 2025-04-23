@@ -1,22 +1,20 @@
-<p>temperature-converter works!</p>
-
-<div>
+<div class="main-container">
     <h2>Temperature Converter</h2>
 
-    <!-- Radio button for Fahrenheit to Celsius conversion -->
-    <div>
-        <label>
-            <input type="radio" name="conversionType" (change)="toggleConversionType('farenheitToCelsius')"
-                [checked]="conversionType === 'farenheitToCelsius'">
-            Fahrenheit to Celsius
-        </label>
+    <div class="radio-btn-container">
+        <!-- Radio button for Fahrenheit to Celsius conversion -->
+            <label>
+                <input type="radio" name="conversionType" (change)="toggleConversionType('farenheitToCelsius')"
+                    [checked]="conversionType === 'farenheitToCelsius'">
+                Fahrenheit to Celsius
+            </label>
 
-        <!-- Radio button for Celsius to Fahrenheit conversion -->
-        <label>
-            <input type="radio" name="conversionType" (change)="toggleConversionType('celsiusToFarenheit')"
-                [checked]="conversionType === 'celsiusToFarenheit'">
-            Celsius to Fahrenheit
-        </label>
+            <!-- Radio button for Celsius to Fahrenheit conversion -->
+            <label>
+                <input type="radio" name="conversionType" (change)="toggleConversionType('celsiusToFarenheit')"
+                    [checked]="conversionType === 'celsiusToFarenheit'">
+                Celsius to Fahrenheit
+            </label>
     </div>
 
     <!-- Property binding to toggle the visibility of each form -->
@@ -29,7 +27,7 @@
 
     <div [style.display]="conversionType === 'celsiusToFarenheit' ? 'block' : 'none'">
         <label for="celsius">Celsius:</label>
-                <!-- Two way data binding for Celsius input -->
+        <!-- Two way data binding for Celsius input -->
         <input id="celsius" [(ngModel)]="celsius" (input)="convertToFarenheit()">
         <p>{{celsius}}° Celsius = {{farenheit}}° Fahrenheit</p>
     </div>
