@@ -5,9 +5,8 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 1em;
-    background-color: #f4f6f8;
-    border-bottom: 1px solid #d1d5db;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: #D8B8A2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* navbar link styling */
@@ -30,7 +29,7 @@ ul.nav-links li a {
 
 ul.nav-links li a:hover,
 ul.nav-links li a.active {
-    color: #e91e63;
+    color: #800020;
 }
 
 /* hamburger icon styling */
@@ -106,7 +105,7 @@ ul.nav-links li a.active {
       display: none;
       flex-direction: column;
       width: 100%;
-      background-color: #f4f6f8;
+      background-color: #D8B8A2;
       padding: 1em;
       margin-top: 1em;
     }
@@ -116,6 +115,6 @@ ul.nav-links li a.active {
     }
   
     .hamburger-menu:hover .bar {
-      background-color: #e91e63;
+      background-color: #800020;
     }
   }
