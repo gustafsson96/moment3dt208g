@@ -26,6 +26,8 @@ export class TemperatureConverterComponent {
   // Switch conversion direction based on user choice
   toggleConversionType(type: string) {
     this.conversionType = type;
+    this.farenheit = 0;
+    this.celsius = 0;
     if (this.conversionType === 'celsiusToFarenheit') {
       this.convertToFarenheit();
     } else {

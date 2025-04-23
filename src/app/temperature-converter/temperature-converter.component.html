@@ -21,14 +21,14 @@
     <div [style.display]="conversionType === 'farenheitToCelsius' ? 'block' : 'none'">
         <label for="farenheit">Fahrenheit:</label>
         <!-- Two way data binding for Farenheit input -->
-        <input id="farenheit" [(ngModel)]="farenheit" (input)="convertToCelsius()">
-        <p>{{farenheit}}° Fahrenheit = {{celsius | number:'1.2-2'}}° Celsius</p>
+        <input id="farenheit" type="number" step="0.01" [(ngModel)]="farenheit" (input)="convertToCelsius()">
+        <p>{{farenheit | number:'1.2-2'}}° Fahrenheit = {{celsius | number:'1.2-2'}}° Celsius</p>
     </div>
 
     <div [style.display]="conversionType === 'celsiusToFarenheit' ? 'block' : 'none'">
         <label for="celsius">Celsius:</label>
         <!-- Two way data binding for Celsius input -->
-        <input id="celsius" [(ngModel)]="celsius" (input)="convertToFarenheit()">
-        <p>{{celsius}}° Celsius = {{farenheit| number:'1.2-2'}}° Fahrenheit</p>
+        <input id="celsius" type="number" step="0.01" [(ngModel)]="celsius" (input)="convertToFarenheit()">
+        <p>{{celsius | number:'1.2-2'}}° Celsius = {{farenheit| number:'1.2-2'}}° Fahrenheit</p>
     </div>
 </div>
