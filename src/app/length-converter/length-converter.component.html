@@ -9,7 +9,7 @@
             Feet to Meter
         </label>
 
-        <!-- Radio button for Meter to Feet conversion -->
+        <!-- Radio button for meter to feet conversion -->
         <label>
             <input type="radio" name="conversionType" (change)="toggleConversionType('meterToFeet')"
                 [checked]="conversionType === 'meterToFeet'">
@@ -20,14 +20,14 @@
     <!-- Property binding to toggle the visibility of each form -->
     <div [style.display]="conversionType === 'feetToMeter' ? 'block' : 'none'">
         <label for="feet">Feet:</label>
-        <!-- Two way data binding for Feet input -->
+        <!-- Two way data binding for feet input -->
         <input id="feet" [(ngModel)]="feet" (input)="convertToMeter()">
         <p>{{feet}} Feet = {{meter | number:'1.2-2'}} Meters</p>
     </div>
 
     <div [style.display]="conversionType === 'meterToFeet' ? 'block' : 'none'">
         <label for="meter">Meter:</label>
-        <!-- Two way data binding for Meter input -->
+        <!-- Two way data binding for meter input -->
         <input id="meter" [(ngModel)]="meter" (input)="convertToFeet()">
         <p>{{meter}} Meter = {{feet | number:'1.2-2'}} Feet</p>
     </div>
