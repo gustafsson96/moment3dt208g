@@ -1,1 +1,34 @@
-<p>length-converter works!</p>
+<div class="main-container">
+    <h2>Length Converter</h2>
+
+    <div class="radio-btn-container">
+        <!-- Radio button for Feet to Meter conversion -->
+        <label>
+            <input type="radio" name="conversionType" (change)="toggleConversionType('feetToMeter')"
+                [checked]="conversionType === 'feetToMeter'">
+            Feet to Meter
+        </label>
+
+        <!-- Radio button for Meter to Feet conversion -->
+        <label>
+            <input type="radio" name="conversionType" (change)="toggleConversionType('meterToFeet')"
+                [checked]="conversionType === 'meterToFeet'">
+            Meter to Feet
+        </label>
+    </div>
+
+    <!-- Property binding to toggle the visibility of each form -->
+    <div [style.display]="conversionType === 'feetToMeter' ? 'block' : 'none'">
+        <label for="feet">Feet:</label>
+        <!-- Two way data binding for Feet input -->
+        <input id="feet" [(ngModel)]="feet" (input)="convertToMeter()">
+        <p>{{feet}} Feet = {{meter}} Meters</p>
+    </div>
+
+    <div [style.display]="conversionType === 'meterToFeet' ? 'block' : 'none'">
+        <label for="meter">Meter:</label>
+        <!-- Two way data binding for Meter input -->
+        <input id="meter" [(ngModel)]="meter" (input)="convertToFeet()">
+        <p>{{meter}} Meter = {{feet}} Feet</p>
+    </div>
+</div>
