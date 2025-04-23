@@ -8,5 +8,18 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  isMenuOpen: boolean = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    const navLinks = document.querySelector('.nav-links') as HTMLUListElement;
+    const hamburgerMenu = document.querySelector('.hamburger-menu') as HTMLDivElement;
+    
+    if (navLinks) {
+      navLinks.classList.toggle('active', this.isMenuOpen);
+    }
+    if (hamburgerMenu) {
+      hamburgerMenu.classList.toggle('active', this.isMenuOpen);
+    }
+  }
 }

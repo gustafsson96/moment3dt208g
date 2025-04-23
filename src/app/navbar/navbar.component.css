@@ -1,17 +1,25 @@
-ul {
-    margin: 0;
-    padding: 1em;
-    list-style: none;
+/* navbar styling */
+nav {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    gap: 1.8em;
     justify-content: center;
+    align-items: center;
+    padding: 1em;
     background-color: #f4f6f8;
     border-bottom: 1px solid #d1d5db;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-ul li a {
+/* navbar link styling */
+ul.nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.8em;
+}
+
+ul.nav-links li a {
     font-size: 1.1em;
     font-weight: bold;
     text-decoration: none;
@@ -20,10 +28,93 @@ ul li a {
     transition: color 0.3s ease;
 }
 
-  ul li a:hover {
+ul.nav-links li a:hover,
+ul.nav-links li a.active {
     color: #e91e63;
-  }
+}
 
-  ul li a.active {
-    color: #e91e63;
+/* hamburger icon styling */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 110;
+}
+
+.hamburger-menu .bar {
+    background-color: #333;
+    height: 4px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      align-self: flex-start;
+      cursor: pointer;
+    }
+  
+    .bar {
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #333;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  
+    .bar:nth-child(1) {
+      top: 0;
+    }
+  
+    .bar:nth-child(2) {
+      top: 8px;
+    }
+  
+    .bar:nth-child(3) {
+      top: 16px;
+    }
+  
+    .hamburger-menu.active .bar:nth-child(1) {
+      transform: rotate(45deg);
+      top: 8px;
+    }
+  
+    .hamburger-menu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger-menu.active .bar:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 8px;
+    }
+  
+    ul.nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #f4f6f8;
+      padding: 1em;
+      margin-top: 1em;
+    }
+  
+    ul.nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger-menu:hover .bar {
+      background-color: #e91e63;
+    }
   }
