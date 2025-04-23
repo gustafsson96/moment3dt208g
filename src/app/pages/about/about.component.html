@@ -1,17 +1,47 @@
-    <h1>About the Project</h1>
-    <section>
-        <h2></h2>
-        <p></p>
-    </section>
-    <section>
-        <h2></h2>
-        <p></p>
-    </section>
-    <section>
-        <h2></h2>
-        <p></p>
-    </section>
-    <section>
-        <h2></h2>
-        <p></p>
-    </section>
+<h1>About</h1>
+<p class="info">Information på svenska</p>
+<section>
+    <h2>Uppgiften</h2>
+    <p>Denna uppgift utgör Moment 3 - Angular I i kursen Programmering i TypeScript hos Mittuniversitetet och syftar
+        till att skapa en grundläggande förståelse för Angular: hur det används som ett ramverk, hur en
+        Angular-applikation konstrueras och hur dess olika byggstenar kommunicerar och interagerar med varandra.</p>
+</section>
+<section>
+    <h2>Components</h2>
+    <p>För denna uppgift har jag skapat ett antal så kallade "components": </p>
+    <ul>
+        <li>navbar</li>
+        <li>footer</li>
+        <li>button</li>
+        <li>pages/home</li>
+        <li>pages/convert</li>
+        <li>pages/about</li>
+        <li>temperature-converter</li>
+        <li>length-converter</li>
+    </ul>
+    <p>Tillsammans utgör dessa komponenter allt innehåll på webbsidan. Navbar och footer inkluderas på samtliga sidor.
+        Innehållet under /pages utgör de tre olika undersidorna home, convert och about.</p>
+</section>
+<section>
+    <h2>Huvudmeny</h2>
+    <p>Huvudmenyn utgörs av komponenten "navbar" och har skapats med hjälp av Angulars router-modul inuti app.routes.ts.
+        Då applikationen laddats dirigeras den inledningsvis till /home via path: ' ', redirectTo: 'home'.</p>
+</section>
+<section>
+    <h2>"Home"</h2>
+    <p>Startsidan innehåller tre bilder och två knappar. För
+        bilderna har NgOptimizedImage importerats i home.component.ts för att dra nytta av Angulars inbyggda
+        bildoptimering. Attributet ngSrc används i stället för src på img-elementen. Knapparna utgörs av en component
+        och länkar till de övriga två sidorna, precis som huvudmenyn.</p>
+</section>
+<section>
+    <h2>"Convert"</h2>
+    <p>Innehållet på sidan "convert" utgörs av två components: temperature-converter och length-converter. Med hjälp av
+        dessa kan användaren konvertera värden: Farenheit till Celsius och vice versa, samt feet till meter och vice
+        versa. Detta har lösts med hjälp av databindning. Jag har även importerat CommonModule för att kunna använda
+        Angulars pipe syntax och på så sätt begränsa antalet decimaler i resultaten till två (number:'1.2-2').</p>
+</section>
+<section>
+    <h2>Slutsatser</h2>
+    <p></p>
+</section>
