@@ -22,13 +22,13 @@
         <label for="feet">Feet:</label>
         <!-- Two way data binding for Feet input -->
         <input id="feet" [(ngModel)]="feet" (input)="convertToMeter()">
-        <p>{{feet}} Feet = {{meter}} Meters</p>
+        <p>{{feet}} Feet = {{meter | number:'1.2-2'}} Meters</p>
     </div>
 
     <div [style.display]="conversionType === 'meterToFeet' ? 'block' : 'none'">
         <label for="meter">Meter:</label>
         <!-- Two way data binding for Meter input -->
         <input id="meter" [(ngModel)]="meter" (input)="convertToFeet()">
-        <p>{{meter}} Meter = {{feet}} Feet</p>
+        <p>{{meter}} Meter = {{feet | number:'1.2-2'}} Feet</p>
     </div>
 </div>

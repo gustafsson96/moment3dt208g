@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-temperature-converter',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './temperature-converter.component.html',
   styleUrl: './temperature-converter.component.css'
 })
