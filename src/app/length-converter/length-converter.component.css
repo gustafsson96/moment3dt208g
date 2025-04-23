@@ -1,5 +1,6 @@
 div {
-    max-width: 50%;
+    max-width: 700px;
+    width: 50%;
     margin: 2em auto;
     padding: 1.3em;
     background-color: #f9f9f9;
@@ -54,3 +55,10 @@ p {
     margin-top: 0.7em;
     text-align: center;
 }
+
+/* media query for screens smaller than 800px */
+@media (max-width: 800px) {
+    div {
+        width: 85%;
+    }
+  }
