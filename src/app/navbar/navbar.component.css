@@ -1,23 +1,29 @@
 ul {
     margin: 0;
     padding: 1em;
-    list-style-type: none;
+    list-style: none;
     display: flex;
     flex-direction: row;
     gap: 1.8em;
     justify-content: center;
+    background-color: #f4f6f8;
+    border-bottom: 1px solid #d1d5db;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 ul li a {
-    text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    padding: 0.1em 0.5em;
+    transition: color 0.3s ease;
 }
 
-ul li a:hover {
-    text-decoration: underline;
-}
+  ul li a:hover {
+    color: #e91e63;
+  }
 
-.active {
-    color: green;
-}
+  ul li a.active {
+    color: #e91e63;
+  }
