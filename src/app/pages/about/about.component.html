@@ -4,7 +4,10 @@
     <h2>Uppgiften</h2>
     <p>Denna uppgift utgör Moment 3 - Angular I i kursen Programmering i TypeScript hos Mittuniversitetet och syftar
         till att skapa en grundläggande förståelse för Angular: hur det används som ett ramverk, hur en
-        Angular-applikation konstrueras och hur dess olika byggstenar kommunicerar och interagerar med varandra.</p>
+        Angular-applikation konstrueras och hur dess olika byggstenar kommunicerar och interagerar med varandra. Jag har
+        inkluderat ett antal länkar från Angluar hemsida och dokumentation där jag, utöver kursmaterialet, läst på om de
+        olika koncepten för att lösa
+        uppgiften.</p>
 </section>
 <section>
     <h2>Components</h2>
@@ -19,27 +22,67 @@
         <li>length-converter</li>
     </ul>
     <p>Tillsammans utgör dessa komponenter allt innehåll på webbsidan. Navbar och footer inkluderas på samtliga sidor.
-        Innehållet under /pages utgör de tre olika undersidorna home, convert och about.</p>
+        Innehållet under /pages utgör de tre olika undersidorna home, convert och about. Komponenterna har stylats
+        specifikt i sina respektive stylesheets medan mer generellt innehåll så som body, main och h1-element har
+        stylats globalt i style.css.</p>
+    <p>För att lära mig hur jag skulle skapa och använda komponenter tog jag främst del av kursmaterialet, men jag läste
+        även Angluars dokumentation för repetition: <a href="https://angular.dev/essentials/components#using-components"
+            target="_blank">Components</a>.</p>
 </section>
 <section>
     <h2>Huvudmeny</h2>
     <p>Huvudmenyn utgörs av komponenten "navbar" och har skapats med hjälp av Angulars router-modul inuti app.routes.ts.
-        Då applikationen laddats dirigeras den inledningsvis till /home via path: ' ', redirectTo: 'home'.</p>
+        Då applikationen laddats dirigeras den inledningsvis till /home via path: ' ', redirectTo: 'home'. Angular
+        förklarar routing här: <a href="https://v17.angular.io/guide/routing-overview" target="_blank">Angular
+            Routing</a></p>
 </section>
 <section>
     <h2>"Home"</h2>
     <p>Startsidan innehåller tre bilder. För
         bilderna har NgOptimizedImage importerats i home.component.ts för att dra nytta av Angulars inbyggda
-        bildoptimering. Attributet ngSrc används i stället för src på img-elementen.</p>
+        bildoptimering. Attributet ngSrc används i stället för src på img-elementen. För en överblick av detta läste jag
+        <a href="https://angular.dev/api/common/NgOptimizedImage#description" target="_blank">NgOptimizedImage</a> på
+        Angulars hemsida.
+    </p>
 </section>
 <section>
     <h2>"Convert"</h2>
-    <p>Innehållet på sidan "convert" utgörs av två components: temperature-converter och length-converter. Med hjälp av
+    <p>Innehållet på sidan "convert" utgörs av två komponenter: temperature-converter och length-converter. Med hjälp av
         dessa kan användaren konvertera värden: Farenheit till Celsius och vice versa, samt feet till meter och vice
-        versa. Detta har lösts med hjälp av databindning. Jag har även importerat CommonModule för att kunna använda
-        Angulars pipe syntax och på så sätt begränsa antalet decimaler i resultaten till två (number:'1.2-2').</p>
+        versa. Från vilket värde användaren vill konvertera sköts med radioknappar och användarens val avgör vilken
+        metod som är relevant att köra i klasserna bakom kulisserna.</p>
+
+    <p>Utöver komponeterna har uppgiften även lösts med hjälp av databindning för att
+        användarens inmatning +
+        komponenternas beräkningar automatiskt ska leverera resultatet av konverteringen i realtid. FormsModule har
+        importerats i
+        respektive
+        konverterings-komponents ts-fil och ngModule har inkluderats i input-elementen.</p>
+    <p>Jag har även importerat
+        CommonModule för att kunna använda
+        Angulars pipe syntax och på så sätt begränsa antalet decimaler i resultaten till två (number:'1.2-2'). Mer om
+        det här: <a href="https://angular.dev/api/common/DecimalPipe" target="_blank">DecimalPipe</a>.</p>
 </section>
 <section>
     <h2>Slutsatser</h2>
-    <p></p>
+    <p>Detta är första gången jag arbetar med Angular och även om det var lite klurigt i början så uppskattade jag också
+        snabbt
+        hur arbetet struktureras och förenklas med de koncept som introducerats under detta moment. Jag är särskilt
+        förtjust i komponenter och möjligheten att kunna sköta styling både globalt och mer specifikt. Det blev mycket
+        enklare
+        att direkt göra små ändringar när det kunde skötas direkt i komponenten snarare än att måsta leta rätt på en
+        specifik klass eller ett id i en större styles.css fil.</p>
+    <p>Även om jag upplevt strukturen som komponenterna möjliggör som något positivt har det också emmellanåt varit lite
+        svårt att navigera mellan alla olika filer. Detta beror färmst på att filstrukturen för samtliga komponenter ser
+        mer eller mindre likadan ut, eftersom man tidigare varit van vid att filer av samma typ ofta är samlade på samma
+        plats
+        (.html för sig, .css för sig och så vidare). Detta är väl säkerligen en vanesak och något man lär sig
+        strukturera på ett bra sätt i takt med att man arbetar mer med Angular.</p>
+    <p>Eftersom jag fortfarande tycker att TypeScript känns nytt var det ibland också lite snurrigt att skilja på vad
+        som är specifikt för Angular och vad som hör till vanlig TypeScript. Jag har läst mycket i Angulars
+        dokumentation för att försöka förstå koncepten som erbjuds och jag tycker det gått rätt bra för den här
+        uppgiften, även om jag som sagt ibland har gått tillbaka och repeterat väldigt grundläggande TypeScript för att
+        inte snurra till informationen för mycket. Videosarna i kursmaterialet har varit väldigt värdefulla.</p>
+    <p>Jag tycker att denna uppgift har varit en väldigt bra introduktion till Angular och jag ser fram emot att använda
+        det mer!</p>
 </section>
