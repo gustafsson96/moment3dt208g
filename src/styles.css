@@ -19,6 +19,8 @@ h1 {
 .radio-btn-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 2em;
     margin-bottom: 1.5em;
 }
