@@ -5,7 +5,7 @@
     <p>Denna uppgift utgör Moment 3 - Angular I i kursen Programmering i TypeScript hos Mittuniversitetet och syftar
         till att skapa en grundläggande förståelse för Angular: hur det används som ett ramverk, hur en
         Angular-applikation konstrueras och hur dess olika byggstenar kommunicerar och interagerar med varandra. Jag har
-        inkluderat ett antal länkar från Angluar hemsida och dokumentation där jag, utöver kursmaterialet, läst på om de
+        inkluderat ett antal länkar i nedanstående sektioner från Angulars hemsida och dokumentation där jag, utöver kursmaterialet, läst på om de
         olika koncepten för att lösa
         uppgiften.</p>
 </section>
@@ -26,7 +26,7 @@
         specifikt i sina respektive stylesheets medan mer generellt innehåll så som body, main och h1-element har
         stylats globalt i style.css.</p>
     <p>För att lära mig hur jag skulle skapa och använda komponenter tog jag främst del av kursmaterialet, men jag läste
-        även Angluars dokumentation för repetition: <a href="https://angular.dev/essentials/components#using-components"
+        även Angulars dokumentation för repetition: <a href="https://angular.dev/essentials/components#using-components"
             target="_blank">Components</a>.</p>
 </section>
 <section>
@@ -65,7 +65,16 @@
 </section>
 <section>
     <h2>Publicering</h2>
-    <p></p>
+    <p>För att publicera webbplatsen använde jag <a href="https://www.netlify.com/" target="_blank">Netlify</a>. För att
+        detta skulle vara möjligt var jag tvungen att göra några små förberedelser i projektet. För att lista ut hur
+        detta skulle gå till googlade jag runt på olika sidor, och använde till slut denna video som guide: <a
+            href="https://www.youtube.com/watch?v=nADnC-esRjc&t=61s" target="_blank">Deploying Angular Frontend to
+            Netlify in Few Simple Steps | CI/CD with GitHub</a> vilket verkar funkat bra. Det jag gjorde var
+        att inkludera /dist mappen i projektets GitHub repository eftersom den är inkluderad i .gitignore av default.
+        Jag skapade även en netlify.toml fil som styr anrop till index.html. Min första deploy efter detta misslyckades,
+        men utefter direktiv från Netlify ändrade jag [build]
+        publish = "dist/moment3dt208g" till [build]
+        publish = "dist/moment3dt208g/browser" i netlify.toml filen, vilket verkar löst problemet.</p>
 </section>
 <section>
     <h2>Slutsatser</h2>
