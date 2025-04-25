@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/moment3dt208g" 
+  publish = "dist/moment3dt208g/browser" 
 
 [[redirects]]
   from = "/*"
