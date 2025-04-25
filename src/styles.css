@@ -15,22 +15,14 @@ h1 {
     font-size: 3em;
 }
 
-/* Ensure radion btns are centered for temperature-converter and length-converter */
+/* radio btn container styling for convert tools */
 .radio-btn-container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
     text-align: center;
     gap: 2em;
     margin-bottom: 1.5em;
-}
-
-.radio-btn-container label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5em;
-    text-align: center;
 }
 
 @media (max-width: 768px) {

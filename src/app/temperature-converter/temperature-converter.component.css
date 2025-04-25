@@ -20,14 +20,12 @@ label {
     font-size: 1.1em;
     margin: 0 0.6em 0.6em 0;
     display: inline-block;
-    text-align: center;
 }
 
 input {
     padding: 0.5rem;
     margin-top: 0.3em;
     margin-bottom: 0.9em;
-    font-size: rem;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -46,7 +44,6 @@ div > div {
     margin-bottom: 1.5em;
     background-color: #fff;
     display: flex;
-    justify-content: center;
 }
 
 /* Styling for the paragraphs showing conversion result */
